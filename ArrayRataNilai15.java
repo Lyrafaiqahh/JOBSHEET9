@@ -1,29 +1,38 @@
 import java.util.Scanner;
+
 public class ArrayRataNilai15 {
     public static void main(String[] args) {
-        int[] nilaiMhs = new int[10]; 
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahElemen = input.nextInt();
+
+        int[] nilaiMhs = new int[jumlahElemen];
         double total = 0;
-        double rata2; 
-        Scanner sc = new Scanner(System.in);
+        double totalLulus = 0;
+        double totalTidakLulus = 0;
+        int countLulus = 0;
+        int countTidakLulus = 0;
 
-        for (int i = 0; i < nilaiMhs.length; i++){
-            System.out.print("Masukkan nilai mahasiswa ke-"+(i+1)+" : ");
-            nilaiMhs[i] = sc.nextInt();
-        }
-        System.out.println("-------------------------------------");
-        for (int i = 0; i < nilaiMhs.length; i++) {
+        for (int i = 0; i < jumlahElemen; i++) {
+            System.out.print("Masukkan Nilai Mahasiswa ke-" + (i + 1) + ": ");
+            nilaiMhs[i] = input.nextInt();
             total += nilaiMhs[i];
-            if (nilaiMhs[i] >=71 && nilaiMhs[i] <= 100) {
-        
-                System.out.println("Mahasiswa ke-"+i+" lulus!");
-            }
-    
-            
-            
-        }
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        rata2 = total/nilaiMhs.length;
-        System.out.println("Rata-rata nilai = "+rata2);
 
-           }
+            if (nilaiMhs[i] >= 60) {
+                totalLulus += nilaiMhs[i];
+                countLulus++;
+            } else {
+                totalTidakLulus += nilaiMhs[i];
+                countTidakLulus++;
+            }
+        }
+
+        
+        double rata2Lulus = (countLulus > 0) ? totalLulus / countLulus : 0;
+        double rata2TidakLulus = (countTidakLulus > 0) ? totalTidakLulus / countTidakLulus : 0;
+
+        System.out.println("Rata-rata nilai lulus = " + rata2Lulus);
+        System.out.println("Rata-rata nilai tidak lulus = " + rata2TidakLulus);
+    }
 }
