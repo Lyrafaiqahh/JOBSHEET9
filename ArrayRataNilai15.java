@@ -32,6 +32,7 @@ public class ArrayRataNilai15 {
         double rata2Lulus = (countLulus > 0) ? totalLulus / countLulus : 0;
         double rata2TidakLulus = (countTidakLulus > 0) ? totalTidakLulus / countTidakLulus : 0;
 
+
         System.out.println("Rata-rata nilai lulus = " + rata2Lulus);
         System.out.println("Rata-rata nilai tidak lulus = " + rata2TidakLulus);
     }
