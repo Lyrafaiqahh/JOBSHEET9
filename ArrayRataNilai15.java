@@ -17,12 +17,9 @@ public class ArrayRataNilai15 {
         
                 System.out.println("Mahasiswa ke-"+i+" lulus!");
             }
-            else if (nilaiAkhir[i] <= 100){
-
-            }
-            else {
-                System.out.println("Maaf, nilai pada mahasiswa ke-"+i+" tidak terdeteksi, anda hanya bisa inputkan nilai 0-100, silahkan coba lagi!");
-            }
+    
+            
+            
         }
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         rata2 = total/nilaiMhs.length;
