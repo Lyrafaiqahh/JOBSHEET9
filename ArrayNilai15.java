@@ -14,7 +14,7 @@ public class ArrayNilai15 {
         
                 System.out.println("Mahasiswa ke-"+i+" lulus!");
             }
-            else if (nilaiAkhir[i] <=69 && nilaiAkhir[i] <= 100){
+            else if (nilaiAkhir[i] <=69){
                 System.out.println("Mahasiswa ke-"+i+" tidak lulus!");
             }
             else {
